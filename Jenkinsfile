@@ -37,7 +37,8 @@ pipeline {
             emailext body: 'A Test EMail',
             recipientProviders: [[$class: 'DevelopersRecipientProvider'],
             [$class: 'RequesterRecipientProvider']],
-            subject: 'Jenkins Test EMail'
+            subject: 'Jenkins Test EMail',
+            to: 'saineeraj0307@gmail.com'
         }
     }
 }
