@@ -33,6 +33,11 @@ pipeline {
         }
     }
     post {
+        success {
+            emailext body: 'A Test EMail',
+            subject: 'Jenkins Test EMail',
+            to: 'saineeraj0307@gmail.com'
+        }
         always {
             emailext body: 'A Test EMail',
             subject: 'Jenkins Test EMail',
